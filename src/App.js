@@ -4,7 +4,6 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
 import Admin from './Components/Admin/Admin';
@@ -19,7 +18,6 @@ function App() {
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
-        <Header></Header>
 
         <Switch>
           <Route path="/" exact>
@@ -38,9 +36,14 @@ function App() {
             <NoMatch></NoMatch>
           </Route>
         </Switch>
+        <Footer></Footer>
       </Router>
     </UserContext.Provider>
   );
 }
-
+const Footer = () => {
+  return (
+    <footer>Developed and maintain By <a href="https://github.com/ishtiak-ahmed">Ishtiak Ahmed</a></footer>
+  )
+}
 export default App;

@@ -1,9 +1,22 @@
-header {
-  display: flex;
-  justify-content: space-between;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  background-color: #cceafb;
+}
+
+header,
+main {
   max-width: 1200px;
   margin: auto;
   padding: 0 20px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
 }
 
 header .logo img {
@@ -25,4 +38,122 @@ nav img {
   height: 50px;
   width: 50px;
   border-radius: 50%;
+}
+
+/* Home Page Style */
+.search-area {
+  max-width: 500px;
+  margin: 50px auto;
+}
+.search-area input,
+.search-area button {
+  padding: 10px 10px;
+  line-height: 25px;
+  border-radius: 5px;
+  border: none;
+}
+.search-area input {
+  border-radius: 5px 0 0 5px;
+  width: 400px;
+  outline: none;
+}
+.search-area button {
+  border-radius: 0 5px 5px 0;
+  margin-left: 0;
+  width: 100px;
+  background-color: #7c14dd;
+  color: #fff;
+}
+
+/* Main */
+.books {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2em;
+}
+.book-item {
+  background-color: lightsteelblue;
+  border-radius: 10px;
+  padding: 20px;
+}
+.book-item .title {
+  margin: 5px 0;
+  line-height: 23px;
+  font-size: 20px;
+}
+.book-item .cover {
+  padding: 20px 30px;
+  background-color: #d4e8fa;
+  height: 250px;
+  border-radius: 10px;
+}
+.cover img {
+  border-radius: 10px;
+  background-color: gray;
+  height: 100%;
+  width: 100%;
+}
+
+.book-item span {
+  font-size: 23px;
+  color: #7c14dd;
+}
+
+.action {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.action button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  background-color: #7c14dd;
+  color: #fff;
+}
+
+/* Login Page Style */
+.login {
+  max-width: 450px;
+  margin: auto;
+  display: grid;
+  margin: auto;
+}
+.login p {
+  text-align: center;
+  margin: 10px;
+}
+.login .form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 8px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  padding: 30px;
+}
+.form input {
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
+}
+.form button {
+  padding: 10px;
+  background-color: #7c14dd;
+  color: #fff;
+  border: none;
+  font-size: 1.2em;
+}
+
+.googlebtn {
+  width: 70%;
+  border: none;
+  margin: auto;
+  padding: 10px;
+  border-radius: 20px;
+}
+/* Footer Style */
+footer {
+  padding: 15px;
+  text-align: center;
 }

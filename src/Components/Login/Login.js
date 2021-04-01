@@ -4,6 +4,8 @@ import "firebase/auth";
 import firebaseConfig from '../Config/firebaseConfig';
 import { UserContext } from '../../App';
 import { useHistory, useLocation } from 'react-router';
+import Header from '../Header/Header';
+
 
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
@@ -16,7 +18,6 @@ const Login = () => {
     let { from } = location.state || { from: { pathname: "/" } };
 
     const handleGoogleLogin = () => {
-        console.log('loging with google')
         const provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth()
             .signInWithPopup(provider)
@@ -33,10 +34,24 @@ const Login = () => {
             });
     }
     return (
-        <div>
-            <h2>Hello Wiz or witch! Please login or register with your google account first.</h2>
-            <button onClick={handleGoogleLogin}>Continue With Google</button>
-        </div>
+        <>
+            <Header></Header>
+            <main>
+                <div className="login">
+                    <div className="form">
+                        <h2>Login</h2>
+                        <label htmlFor="email">Email:</label>
+                        <input type="email" placeholder="enter your email" />
+                        <label htmlFor="password">Password:</label>
+                        <input type="password" placeholder="enter your email" />
+                        <p>Remember Me forgot password?</p>
+                        <button>Login</button>
+                    </div>
+                    <p>Or</p>
+                    <button className="googlebtn" onClick={handleGoogleLogin}>Continue With Google</button>
+                </div>
+            </main>
+        </>
     );
 };
 
