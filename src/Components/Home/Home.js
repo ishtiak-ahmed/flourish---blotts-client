@@ -13,22 +13,6 @@ const Home = () => {
             }
             )
     }, [])
-    const booksCollection = [
-        "Harry Potter And The Philosopher's Stone",
-        "Harry Potter And The Chamber Of Secret",
-        "Harry Potter And The Prisoner Of Azkaban",
-        "Harry Potter And The Fire Of The Goblet",
-        "Harry Potter And The Order Of Phoenix",
-        "Harry Potter And The Half Blood Prince",
-        "Harry Potter And The Deathly Hollows",
-        "Harry Potter And The Philosopher's Stone",
-        "Harry Potter And The Chamber Of Secret",
-        "Harry Potter And The Prisoner Of Azkaban",
-        "Harry Potter And The Fire Of The Goblet",
-        "Harry Potter And The Order Of Phoenix",
-        "Harry Potter And The Half Blood Prince",
-        "Harry Potter And The Deathly Hollows"
-    ]
     return (
         <>
             <Header></Header>
