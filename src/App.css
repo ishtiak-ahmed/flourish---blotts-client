@@ -179,3 +179,20 @@ footer {
   margin-bottom: 10px;
   cursor: pointer;
 }
+/* Cart page */
+.cart-table {
+  padding: 20px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.cart-table tr {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid lightgray;
+}
+.cart-table th {
+  color: gray;
+}

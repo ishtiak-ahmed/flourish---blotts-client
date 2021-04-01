@@ -2,8 +2,15 @@ import React, { useEffect, useState } from 'react';
 
 const localServer = 'http://localhost:1454'
 const liveServer = 'https://flourish-and-blotts.herokuapp.com'
-const server = liveServer
+const server = localServer
 const ManageBook = () => {
+    const handleDelete = (id) => {
+        const url = server + '/delete/' + id
+        console.log(url)
+        fetch(url, { method: "DELETE" })
+            .then(res => res.json())
+            .then(result => console.log('deleted succesfully'))
+    }
 
     const [books, setBooks] = useState([])
     useEffect(() => {
@@ -11,10 +18,24 @@ const ManageBook = () => {
             .then(result => result.json())
             .then(data => {
                 setBooks(data)
-                console.log(data)
             }
             )
     }, [])
+
+    const Book = (props) => {
+        const { name, author, price, _id } = props.book
+        return (
+            <tr>
+                <td>{name}</td>
+                <td>{author}</td>
+                <td>{price}</td>
+                <td>
+                    <button>edit</button>
+                    <button onClick={() => handleDelete(_id)}>X</button>
+                </td>
+            </tr>
+        )
+    }
     return (
         <div>
             <h3>Manage Books</h3>
@@ -26,7 +47,7 @@ const ManageBook = () => {
                     <th>Action</th>
                 </tr>
                 {
-                    books.map((book, index) => <Book key={index} book={book}></Book>)
+                    books.map((book) => <Book key={`${book._id}`} book={book}></Book>)
                 }
             </table>
 
@@ -34,19 +55,6 @@ const ManageBook = () => {
     );
 };
 
-const Book = (props) => {
-    const { name, author, price } = props.book
-    return (
-        <tr>
-            <td>{name}</td>
-            <td>{author}</td>
-            <td>{price}</td>
-            <td>
-                <button>edit</button>
-                <button>X</button>
-            </td>
-        </tr>
-    )
-}
+
 
 export default ManageBook;

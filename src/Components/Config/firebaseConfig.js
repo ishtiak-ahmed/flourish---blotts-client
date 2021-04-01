@@ -1,9 +1,9 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyBUBr0J-pclcu2pv4-jKV42LVTP8lTw-1k",
-    authDomain: "flourish-blotts-63049.firebaseapp.com",
-    projectId: "flourish-blotts-63049",
-    storageBucket: "flourish-blotts-63049.appspot.com",
-    messagingSenderId: "188457678917",
-    appId: "1:188457678917:web:a6abaef03c40f3f09f8b2c"
+    apiKey: "AIzaSyA97MKNQu_PU9OzcD_YdDzeumD3-TrM-us",
+    authDomain: "flourish-and-blotts.firebaseapp.com",
+    projectId: "flourish-and-blotts",
+    storageBucket: "flourish-and-blotts.appspot.com",
+    messagingSenderId: "521283513794",
+    appId: "1:521283513794:web:3edf4a6f919dc21382ba5b"
 };
 export default firebaseConfig;

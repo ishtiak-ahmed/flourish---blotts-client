@@ -10,6 +10,7 @@ import Admin from './Components/Admin/Admin';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import NoMatch from './Components/NoMatch/NoMatch';
 import { createContext, useState } from 'react';
+import Checkout from './Components/Checkout/Checkout';
 
 export const UserContext = createContext();
 
@@ -31,6 +32,9 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/orders">
             <h2>Orders history</h2>
+          </PrivateRoute>
+          <PrivateRoute path="/addtocart/:id">
+            <Checkout></Checkout>
           </PrivateRoute>
           <Route path='/*'>
             <NoMatch></NoMatch>
