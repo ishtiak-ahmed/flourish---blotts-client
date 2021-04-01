@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 
+const localServer = 'http://localhost:1454'
+const liveServer = 'https://flourish-and-blotts.herokuapp.com'
+const server = liveServer
 const ManageBook = () => {
 
     const [books, setBooks] = useState([])
     useEffect(() => {
-        fetch('http://localhost:1454/books')
+        fetch(server + '/books')
             .then(result => result.json())
             .then(data => {
                 setBooks(data)
