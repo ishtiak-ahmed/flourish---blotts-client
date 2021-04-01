@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 // import { useForm } from "react-hook-form";
 // import axios from 'axios'
 
@@ -14,7 +15,7 @@ const Admin = () => {
     return (
         <section id="dashboard">
             <div className="sidebar">
-                <h2>Dashboard</h2>
+                <h2><Link to='/'>Flourish & Blotts</Link></h2>
                 <h4 onClick={() => setMenu('Manage Book')}>Manage Books</h4>
                 <h4 onClick={() => setMenu('Add Book')} > Add Book</h4>
                 <h4 onClick={() => setMenu('Edit Book')} > Edit Book</h4>

@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button';
 
 const AddBook = () => {
     const [imageUrl, setImageUrl] = useState(null)
+    const liveServer = 'https://flourish-and-blotts.herokuapp.com'
 
     const { register, handleSubmit, watch, errors } = useForm();
     const onSubmit = data => {
@@ -17,7 +18,7 @@ const AddBook = () => {
             price: data.price,
             image: imageUrl
         }
-        fetch('http://localhost:1454/addbook', {
+        fetch(liveServer + '/addbook', {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(bookItem)

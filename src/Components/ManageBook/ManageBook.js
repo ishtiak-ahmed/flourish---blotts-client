@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const localServer = 'http://localhost:1454'
 const liveServer = 'https://flourish-and-blotts.herokuapp.com'
-const server = localServer
+const server = liveServer
 const ManageBook = () => {
     const handleDelete = (id) => {
         const url = server + '/delete/' + id
