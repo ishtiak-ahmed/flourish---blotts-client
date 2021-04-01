@@ -3,13 +3,15 @@ import { UserContext } from '../../App';
 import Header from '../Header/Header';
 
 const Order = () => {
+    const liveServer = 'https://flourish-and-blotts.herokuapp.com'
+
     const [loggedInUser] = useContext(UserContext)
     const buyer = { buyer: loggedInUser.email }
 
 
     const [orders, setOrders] = useState([])
     useEffect(() => {
-        fetch('http://localhost:1454/orders', {
+        fetch(liveServer + '/orders', {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(buyer)
