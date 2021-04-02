@@ -56,9 +56,11 @@ const Home = () => {
             <main>
                 {
                     loaded ? <></> :
-                        <div className={classes.spinner}>
-                            <CircularProgress />
-                            <CircularProgress color="secondary" />
+                        <div style={{ textAlign: 'center', width: '100%' }}>
+                            <div className={classes.spinner}>
+                                <CircularProgress />
+                                <CircularProgress color="secondary" />
+                            </div>
                         </div>
                 }
                 <div className="search-area">

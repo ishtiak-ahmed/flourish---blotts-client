@@ -29,7 +29,7 @@ const ManageBook = () => {
         return (
             <tr>
                 <td>{name}</td>
-                <td>{author}</td>
+                <td className="hide">{author}</td>
                 <td>${price}</td>
                 <td>
                     <button style={{ backgroundColor: "green", border: 'none' }}><img src={edit} style={{ height: '15px' }} alt="" /></button>
@@ -46,7 +46,7 @@ const ManageBook = () => {
                     <thead>
                         <tr>
                             <th>Description</th>
-                            <th>Author</th>
+                            <th className="hide">Author</th>
                             <th>Price</th>
                             <th>Action</th>
                         </tr>

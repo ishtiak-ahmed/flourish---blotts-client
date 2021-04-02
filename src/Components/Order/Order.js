@@ -31,7 +31,7 @@ const Order = () => {
                     <table>
                         <thead>
                             <th>Description</th>
-                            <th>Author</th>
+                            <th className="hide">Author</th>
                             <th>Order Date</th>
                             <th>Quantity</th>
                             <th>Price</th>
@@ -44,7 +44,7 @@ const Order = () => {
                                     return (
                                         <tr>
                                             <td>{order.name}</td>
-                                            <td>{order.author}</td>
+                                            <td className="hide">{order.author}</td>
                                             <td>{order.date}</td>
                                             <td>1</td>
                                             <td>${order.price}</td>
@@ -55,7 +55,7 @@ const Order = () => {
                             <tr>
 
                                 <td><strong>Total: </strong></td>
-                                <td></td>
+                                <td className="hide"></td>
                                 <td></td>
                                 <td></td>
                                 <td><strong>${totalPrice} </strong></td>

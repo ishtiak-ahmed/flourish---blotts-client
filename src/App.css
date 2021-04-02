@@ -55,12 +55,14 @@ nav img {
 .search-area input {
   border-radius: 5px 0 0 5px;
   width: 400px;
+  max-width: 70%;
   outline: none;
 }
 .search-area button {
   border-radius: 0 5px 5px 0;
   margin-left: 0;
   width: 100px;
+
   background-color: #7c14dd;
   color: #fff;
 }
@@ -277,14 +279,32 @@ td button {
   padding: 5px;
   margin: 5px;
 }
-
+.hide {
+  display: block;
+}
 @media (max-width: 970px) {
   .books {
     grid-template-columns: repeat(2, 1fr);
   }
+  .sidebar {
+    padding: 15px;
+  }
+  .table {
+    padding: 5px;
+  }
+
+  .hide {
+    display: none;
+  }
 }
 
 @media (max-width: 700px) {
+  header {
+    display: block;
+  }
+  nav a {
+    padding: 10px;
+  }
   .books {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -293,5 +313,8 @@ td button {
   }
   .sidebar {
     height: auto;
+  }
+  .search-area button {
+    width: 70px;
   }
 }
