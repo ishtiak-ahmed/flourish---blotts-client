@@ -49,19 +49,30 @@ const AddBook = () => {
             });
     }
     return (
-        <div>
-            <h3>Add Book</h3>
+        <div className='add-book'>
+            <h2>Add Book</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <input name="name" defaultValue="book name" ref={register} />
-                <input name="author" defaultValue="author name" ref={register} />
-                <input name="price" defaultValue="price" ref={register} />
-                <input name="cover" type='file' ref={register({ required: true })} onChange={uploadImage} />
-                {errors.exampleRequired && <span>This field is required</span>}
-                <input type="submit" />
+                <div className="form">
+                    <div className="form-group">
+                        <p>Book Name</p>
+                        <input name="name" defaultValue="book name" ref={register} />
+                    </div>
+                    <div className="form-group">
+                        <p>Author Name</p>
+                        <input name="author" defaultValue="author name" ref={register} />
+                    </div>
+                    <div className="form-group">
+                        <p>Price</p>
+                        <input name="price" defaultValue="price" ref={register} />
+                    </div>
+                    <div className="form-group">
+                        <p>Add Cover Photo</p>
+                        <input name="cover" type='file' ref={register({ required: true })} onChange={uploadImage} />
+                    </div>
+                    {errors.exampleRequired && <span>This field is required</span>}
+                </div>
+                <input className='savebtn' type="submit" value="Save" />
             </form>
-            <Button onClick={handleSave} variant="contained" color="primary">
-                Save
-                </Button>
         </div>
     );
 };

@@ -25,13 +25,32 @@ const Order = () => {
             <Header></Header>
             <main>
                 <h2>Your Order list</h2>
-                {
-                    orders.map(order => {
-                        return (
-                            <p>{order.name} , {order.price}</p>
-                        )
-                    })
-                }
+                <div className="table">
+                    <table>
+                        <thead>
+                            <th>Description</th>
+                            <th>Author</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                        </thead>
+                        <tbody>
+
+
+                            {
+                                orders.map(order => {
+                                    return (
+                                        <tr>
+                                            <td>{order.name}</td>
+                                            <td>{order.author}</td>
+                                            <td>1</td>
+                                            <td>{order.price}</td>
+                                        </tr>
+                                    )
+                                })
+                            }
+                        </tbody>
+                    </table>
+                </div>
             </main>
         </>
     );

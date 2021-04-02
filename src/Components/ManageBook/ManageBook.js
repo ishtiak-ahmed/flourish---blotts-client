@@ -28,7 +28,7 @@ const ManageBook = () => {
             <tr>
                 <td>{name}</td>
                 <td>{author}</td>
-                <td>{price}</td>
+                <td>${price}</td>
                 <td>
                     <button>edit</button>
                     <button onClick={() => handleDelete(_id)}>X</button>
@@ -37,20 +37,25 @@ const ManageBook = () => {
         )
     }
     return (
-        <div>
-            <h3>Manage Books</h3>
-            <table>
-                <tr>
-                    <th>Description</th>
-                    <th>Author</th>
-                    <th>Price</th>
-                    <th>Action</th>
-                </tr>
-                {
-                    books.map((book) => <Book key={`${book._id}`} book={book}></Book>)
-                }
-            </table>
-
+        <div className="manage-book">
+            <h2>Manage Books</h2>
+            <div className='table'>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>Author</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            books.map((book) => <Book key={`${book._id}`} book={book}></Book>)
+                        }
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 };

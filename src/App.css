@@ -170,7 +170,7 @@ footer {
 }
 .sidebar {
   padding: 20px 50px;
-  background-color: #333;
+  background-color: #19103f;
   color: #fff;
   height: 100vh;
   /* position: fixed; */
@@ -199,4 +199,69 @@ footer {
 }
 .cart-table th {
   color: gray;
+}
+th,
+td {
+  padding: 5px 8px;
+}
+
+/* Manage Book */
+.manage-book {
+  background-color: #a8bdce;
+  background-color: #f4f7fc;
+}
+.manage-book h2 {
+  padding: 20px;
+  background-color: #cbd7e1;
+}
+.table {
+  padding: 20px 50px 50px 20px;
+}
+.table table {
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #cbd7e1;
+  width: 100%;
+}
+.table thead {
+  text-align: left;
+  background-color: #a8bdce;
+  padding: 10px;
+}
+
+main > h2 {
+  padding: 20px;
+}
+
+/* Add Book */
+.add-book h2 {
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 30px;
+}
+form {
+  padding: 20px;
+}
+.form {
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+}
+.form input {
+  background-color: #a8bdce;
+  width: 100%;
+  border-radius: 5px;
+}
+.form input[type="file"] {
+  background-color: transparent;
+  padding: 5px;
+}
+.savebtn {
+  padding: 10px 20px;
+  border: none;
+  color: #fff;
+  background-color: #4c0e80;
 }
