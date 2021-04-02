@@ -20,6 +20,8 @@ const Order = () => {
             .then(data => setOrders(data))
 
     }, [])
+    const totalPrice = orders.reduce((total, book) => { return total + Number(book.price) }, 0)
+    console.log(totalPrice)
     return (
         <>
             <Header></Header>
@@ -30,6 +32,7 @@ const Order = () => {
                         <thead>
                             <th>Description</th>
                             <th>Author</th>
+                            <th>Order Date</th>
                             <th>Quantity</th>
                             <th>Price</th>
                         </thead>
@@ -42,12 +45,21 @@ const Order = () => {
                                         <tr>
                                             <td>{order.name}</td>
                                             <td>{order.author}</td>
+                                            <td>{order.date}</td>
                                             <td>1</td>
-                                            <td>{order.price}</td>
+                                            <td>${order.price}</td>
                                         </tr>
                                     )
                                 })
                             }
+                            <tr>
+
+                                <td><strong>Total: </strong></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><strong>${totalPrice} </strong></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>

@@ -86,12 +86,12 @@ nav img {
   background-color: #d4e8fa;
   height: 250px;
   border-radius: 10px;
+  text-align: center;
 }
 .cover img {
   border-radius: 10px;
   background-color: gray;
   height: 100%;
-  width: 100%;
 }
 
 .book-item span {
@@ -106,7 +106,7 @@ nav img {
 }
 .action button {
   border: none;
-  padding: 10px 20px;
+  padding: 10px;
   border-radius: 6px;
   background-color: #7c14dd;
   color: #fff;
@@ -264,4 +264,34 @@ form {
   border: none;
   color: #fff;
   background-color: #4c0e80;
+}
+
+/* Menu Icon */
+.menu-icon img {
+  height: 20px;
+  margin-right: 5px;
+  margin-bottom: -2px;
+}
+
+td button {
+  padding: 5px;
+  margin: 5px;
+}
+
+@media (max-width: 970px) {
+  .books {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .books {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #dashboard {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    height: auto;
+  }
 }

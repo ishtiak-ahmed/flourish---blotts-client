@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import edit from '../../icons/edit.png';
+import dustbin from '../../icons/dustbin.png';
 
 const localServer = 'http://localhost:1454'
 const liveServer = 'https://flourish-and-blotts.herokuapp.com'
@@ -30,8 +32,8 @@ const ManageBook = () => {
                 <td>{author}</td>
                 <td>${price}</td>
                 <td>
-                    <button>edit</button>
-                    <button onClick={() => handleDelete(_id)}>X</button>
+                    <button style={{ backgroundColor: "green", border: 'none' }}><img src={edit} style={{ height: '15px' }} alt="" /></button>
+                    <button onClick={() => handleDelete(_id)} style={{ backgroundColor: "red", border: 'none' }}><img src={dustbin} style={{ height: '15px' }} alt="" /></button>
                 </td>
             </tr>
         )

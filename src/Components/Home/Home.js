@@ -1,11 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
 import Header from '../Header/Header';
+import { makeStyles } from '@material-ui/core/styles';
+import CircularProgress from '@material-ui/core/CircularProgress';
+
+const useStyles = makeStyles((theme) => ({
+    spinner: {
+        display: 'flex',
+        textAlign: 'center'
+    },
+}));
+
 const localServer = 'http://localhost:1454'
 const liveServer = 'https://flourish-and-blotts.herokuapp.com'
 const server = liveServer
 
 const Home = () => {
+    const [loaded, setLoaded] = useState(false)
+    const classes = useStyles();
     const histoy = useHistory()
 
     const [books, setBooks] = useState([])
@@ -14,6 +26,7 @@ const Home = () => {
             .then(result => result.json())
             .then(data => {
                 setBooks(data)
+                setLoaded(true)
             }
             )
     }, [])
@@ -41,6 +54,13 @@ const Home = () => {
         <>
             <Header></Header>
             <main>
+                {
+                    loaded ? <></> :
+                        <div className={classes.spinner}>
+                            <CircularProgress />
+                            <CircularProgress color="secondary" />
+                        </div>
+                }
                 <div className="search-area">
                     <input type="text" placeholder="search a book" />
                     <button>Search</button>

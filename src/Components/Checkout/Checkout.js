@@ -21,6 +21,7 @@ const Checkout = (props) => {
     const handleAdd = (id) => {
         const item = { ...book }
         item.buyer = loggedInUser.email
+        item.date = new Date().toDateString()
         console.log(item)
         fetch(server + '/addorder', {
             method: "POST",
