@@ -4,8 +4,6 @@
 
 ## Buy or Visit our [Shop](https://flourish-and-blotts.web.app)
 
-### We are now Owl Delivering all over the world.
-
 ### This is my first full stack project. I added following feature here-
 
 - Loaded products data from Mongodb server
